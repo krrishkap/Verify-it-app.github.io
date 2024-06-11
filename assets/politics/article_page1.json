@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "status": "Misleading",
+      "statusImage": "images/logo.png",
+      "image": "images/article/indian-explosive.jpg",
+      "category": "Politics",
+      "date": "June 9, 2024",
+      "author": "Admin",
+      "source": "https://www.presstv.ir/Detail/2024/06/06/726973/Made-in-India-bomb",
+      "sourceText": "Quds News Network",
+      "title": "Fact Check: Israel Using Indian Bomb Shells in Gaza",
+      "claim": "\"Made in India\" reads the label on the remains of a missile dropped by Israeli warplanes at a UN shelter in Nusseirat refugee camp last night.",
+      "claimTweet": "https://twitter.com/QudsNen/status/1798676471835447456?ref_src=twsrc%5Etfw",
+      "realityImage": "https://hardcore-electric.com/wp-content/uploads/2015/10/underwriter-labratories-certified.png",
+      "realityText": "The label \"Made in India\" found on missile remnants in Gaza has led to speculation about Indian weapons being used in the conflict. However, upon closer examination, the presence of a UL (Underwriters Laboratories) mark above the \"Made in India\" text indicates that the equipment has been certified by Underwriters Laboratories, not necessarily that it is a weapon manufactured in India for military use. Underwriters Laboratories is an organization that provides safety certifications for products. Therefore, the claim that Israel is using Indian bomb shells in Gaza is misleading; the label signifies certification, not the origin of military hardware."
+    },
+    {
+      "id": 2,
+      "status": "True",
+      "statusImage": "images/logo.png",
+      "image": "images/article/another-image.jpg",
+      "category": "Politics",
+      "date": "June 10, 2024",
+      "author": "Admin",
+      "source": "https://example.com/article2",
+      "sourceText": "Example News Network",
+      "title": "Another Political Fact Check",
+      "claim": "Another political claim description here.",
+      "claimTweet": "https://twitter.com/example/status/1234567890",
+      "realityImage": "https://example.com/reality-image.jpg",
+      "realityText": "The reality check for the second article goes here."
+    }
+  ]
+  
