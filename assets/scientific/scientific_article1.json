@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "status": "True",
+        "statusImage": "images/logo.png",
+        "image": "assets/scientific/images/article/subatomic-particle.jpg",
+        "category": "Scientific",
+        "date": "June 14, 2024",
+        "author": "Dr. Jane Smith",
+        "source": "https://www.sciencenews.org/article/new-particle-discovered",
+        "sourceText": "Science News Network",
+        "title": "New Subatomic Particle Discovered at Large Hadron Collider",
+        "claim": " Fact ckeck: Researchers at CERN have discovered a new subatomic particle that could change our understanding of quantum physics.",
+        "claimTweet": "https://twitter.com/airnewsalerts/status/620937609640960001?ref_src=twsrc%5Etfw",
+        "realityImage": "assets/scientific/images/reality/hadron-collider.jpg",
+        "realityText": "The claim is true. CERN has officially announced the discovery of a new subatomic particle observed at the Large Hadron Collider. The finding is expected to have significant implications for the field of quantum physics."
+    },
+    {
+        "id": 2,
+        "status": "False",
+        "statusImage": "images/logo.png",
+        "image": "assets/scientific/images/article/river-moon.png",
+        "category": "Scientific",
+        "date": "June 14, 2024",
+        "author": "Anand kumar",
+        "source": "https://www.spacefacts.com/article/moon-rivers",
+        "sourceText": "Space Facts Network",
+        "title": "Rivers Found Flowing on the Moon's Surface",
+        "claim": "Recent satellite imagery has revealed the presence of flowing rivers on the moon, similar to Earth's water systems.",
+        "claimTweet": "https://twitter.com/NASA/status/1320876642621861888?ref_src=twsrc%5Etfw",
+        "realityImage": "assets/scientific/images/reality/moon-water.png",
+        "realityText": "The claim is false. NASA has clarified that the satellite imagery in question actually shows lunar dust trails caused by micrometeorite impacts, not rivers. There is currently no evidence of flowing water on the moon's surface."
+    }
+]
