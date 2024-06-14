@@ -1,0 +1,34 @@
+[   {
+    "id": 1,
+    "status": "True",
+    "statusImage": "images/logo.png",
+    "image": "assets/politics/images/article/reasi-attack.jpg",
+    "category": "Politics",
+    "date": "June 10, 2024",
+    "author": "Sahil kapoor",
+    "source": "https://x.com/shashank_ssj/status/1800064017102426545",
+    "sourceText": "Shashank Shekhar Jha",
+    "title": "Fact Check: #AllEyesOnReasi banned on instagram",
+    "claim": "Instagram allowed #AlleyesonRafah but banned showing the sufferings of Hindus.",
+    "claimTweet": "https://twitter.com/shashank_ssj/status/1800064017102426545?ref_src=twsrc%5Etfw",
+    "realityImage": "assets/politics/images/reality/reasi-banned.png",
+    "realityText": "June 9, witnessed another hostile terror attack on defenceless hindu pilgrimage returning from Shiv Khori temple to karta in Jammu's Reasi district . The attack resulted in 9 hindu deaths which includes kids and women and more than 30 others severely injured. The reason of the attack is still unknown but timings of the attack coninsided with the prime minister's NDA taking oath for the 3rd consecutive term in Delhi. Some reports suggest it to undermine Delhi's stance on zero-tolerance towards terrorism and some reports suggested it was directed towards Delhi's claim of having restored peace after abrogation of article 370. Soon after the attack a widespread outrage erupted throughout social media platforms with #alleyesonreasi trending all over the internet mirroring the trend of 'all eyes on rafah ' which was supported by big time celebrities. Who were offered money in return of posting specific content on their social media accounts regarding the ongoing isreal-Palestine conflict. As usual these celebrities remained totally silent when the victims were hindus. Not so soon even Meta's Instagram banned the #alleyesomreasi trend from it's platform and post under this hashtag were hidden unmasked the bias in social media platforms. Many social media activitist spoke about this bias against the hindu and times when hindus are victims."
+  },
+    {
+      "id": 2,
+      "status": "False",
+      "statusImage": "images/logo.png",
+      "image": "assets/religious/images/article/quran-higgs.png",
+      "category": "Religious",
+      "date": "June 14, 2024",
+      "author": "Anand kumar",
+      "source": "https://iopscience.iop.org/article/10.1088/1742-6596/795/1/012014",
+      "sourceText": "IOP Science",
+      "title": "Fact Check: The Quran has a verse that predicts the discovery of the Higgs Boson particle.",
+      "claim": "A physics paper claimed the Quran had predicted the discovery of the Higgs Boson.",
+      "claimTweet": "https://twitter.com/RetractionWatch/status/1285154449518886912?ref_src=twsrc%5Etfw",
+      "realityImage": "assets/religious/images/reality/higgs.jpg",
+      "realityText": "There is no verse in the Quran that predicts the discovery of the Higgs Boson particle. While some Islamic scholars have attempted to interpret certain verses as referring to scientific concepts, these interpretations are subjective and not supported by scientific evidence."
+    }
+  ]
+  
