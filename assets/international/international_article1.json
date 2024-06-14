@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "status": "True",
+        "statusImage": "images/logo.png",
+        "image": "assets/international/images/article/sanctions.jpg",
+        "category": "International",
+        "date": "June 14, 2024",
+        "author": "Anand kumar",
+        "source": "https://www.thehindu.com/news/national/no-sanctions-against-india-for-purchasing-refining-russian-oil-us-treasury-officials/article68028509.ece",
+        "sourceText": "The Hindu",
+        "title": "Fact check: No USA sanctions on India Russian oil",
+        "claim": " Fact ckeck: The United States has excluded India from sanctions for purchasing oil from Russia.",
+        "claimTweet": "https://twitter.com/DailyMarksmen/status/1786319792250773828?ref_src=twsrc%5Etfw",
+        "realityImage": "assets/international/images/reality/oil-russia.png",
+        "realityText": " While the United States has imposed sanctions on Russia for its invasion of Ukraine, it has not imposed sanctions on India specifically for purchasing oil from Russia. India has continued to purchase oil from Russia, but has also faced pressure from the US to reduce its dependence on Russian energy."
+    }
+]
