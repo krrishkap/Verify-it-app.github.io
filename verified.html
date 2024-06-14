@@ -5,10 +5,10 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Verify-it - Verified</title>
+  <meta name="keywords" content="fact checking, media literacy, critical thinking, misinformation, disinformation, fake news" />
+  <meta name="description" content="Learn how to critically evaluate information and identify misinformation with our fact checking and media literacy resources." />
+  <meta name="author" content="Verify-it" />
+  <title>Verify-it - Fact check</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -23,11 +23,9 @@
 
   <!-- Embedded CSS for articles -->
   <style>
-    
-
     .navbar-brand .btn-primary {
-      background-color: #4b208c; /* Set background color */
-      border-color: #4b208c; /* Set border color */
+      background-color: #4b208c;
+      border-color: #4b208c;
     }
 
     .carousel-details {
@@ -45,26 +43,27 @@
     }
 
     .article-section {
-      margin: 20px auto; /* Center articles on desktop */
-      max-width: 800px; /* Limit article width */
-      padding: 0 20px; /* Add padding */
-      display: none; /* Initially hide articles */
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 0 20px;
+      display: none;
     }
 
     .article-section.active {
-      display: block; /* Display active article */
+      display: block;
     }
 
     .article-header {
       font-size: 1.5em;
       margin-bottom: 10px;
-      text-align: center; /* Center article headings */
+      text-align: center;
     }
 
     .article-content {
       background: #f8f9fa;
       padding: 20px;
       border-radius: 5px;
+      position: relative;
     }
 
     .article-navigation {
@@ -72,59 +71,135 @@
       margin-top: 20px;
     }
 
-    .article-navigation a {
-      margin: 0 10px;
-      background-color: #4b208c; /* Set background color */
-      border-color: #4b208c; /* Set border color */
+    .navigation-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    /* Mobile Styles */
+
+    .article-navigation a {
+      margin: 0 10px;
+      background-color: #4b208c;
+      border-color: #4b208c;
+    }
+
+    .overlay-status {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(255, 0, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .overlay-status img {
+      margin-right: 5px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .article-content img {
+      position: relative;
+      width: 100%;
+      border-radius: 5px;
+    }
+
     @media (max-width: 767px) {
       .carousel-details p {
         font-size: 12px;
       }
 
       .article-header {
-        font-size: 2em; /* Adjusted font size */
+        font-size: 2em;
       }
+
       .carousel-inner img {
-      width: 100%;
-      height: auto; /* Maintain aspect ratio */
-      object-fit: cover; /* Cover entire area */
-    }
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
     }
 
-    /* Desktop Styles */
     @media (min-width: 768px) {
       .carousel-details p {
         font-size: 14px;
       }
+
       .carousel-inner img {
-      width: auto;
-      height: auto; /* Maintain aspect ratio */
-      object-fit: contain; /* Cover entire area */
-    }
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
 
       .article-header {
-        font-size: 2em; /* Adjusted font size */
+        font-size: 2em;
       }
 
       .footer_section {
-        text-align: left; /* Align footer to left on desktop */
+        text-align: left;
       }
+
       .hero_area {
-      height: 10vh;
-      position: relative;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      background-color: #eae6f5;
+        height: 10vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: #eae6f5;
+      }
     }
 
+    /* Custom CSS for the container and dropdown filters */
+    .filter-label {
+      color: #4b208c;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-control {
+      border: 1px solid #4b208c;
+      color: #4b208c;
+      max-width: 80%;
+      /* Shrinks the width of the select element */
+    }
+
+    .form-control:focus {
+      border-color: #4b208c;
+      box-shadow: 0 0 0 0.2rem rgba(75, 32, 140, 0.25);
+    }
+
+    select.form-control {
+      background-color: #ffffff;
+    }
+
+    select.form-control option {
+      color: #4b208c;
+    }
+
+    select.form-control option:checked {
+      background-color: #4b208c;
+      color: #ffffff;
+    }
+
+    .row {
+      justify-content: center;
+    }
+
+    .col-md-6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .col-md-6 .form-control {
+      width: 100%;
+      max-width: 250px;
+      /* Further constrains the maximum width of the select elements */
     }
   </style>
 </head>
@@ -141,12 +216,12 @@
             <span>
               Verify-it
             </span>
-            <a href="" class="btn btn-primary" style="background-color: #4b208c; border-color: #4b208c;">
-              Download Our App
+            <a href="download.html" class="btn btn-primary" style="background-color: #4b208c; border-color: #4b208c;">
+              Download App
             </a>
-            
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="s-1"> </span>
             <span class="s-2"> </span>
             <span class="s-3"> </span>
@@ -156,20 +231,21 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
+                  <a class="nav-link" href="/index.html"> Home </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#about_section"> About</a>
+                  <a class="nav-link" href="/index.html#about_section"> About </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#service_section"> Our Work </a>
+                  <a class="nav-link" href="/index.html#service_section"> Our Work </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#blog_section"> Blog </a>
+                  <a class="nav-link" href="/index.html#blog_section"> Blog </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#contact_section">Contact </a>
+                  <a class="nav-link" href="contact.html">Contact Us </a>
                 </li>
+
               </ul>
             </div>
           </div>
@@ -179,102 +255,87 @@
     <!-- end header section -->
   </div>
 
-  <!-- main content section -->
-  
-  <section class="container article-section active" id="article1">
-    <div class="article-content">
-      <img src="images/article/indian-explosive.jpg" class="d-block w-100" alt="Fact Check: Israel Using Indian Bomb Shells in Gaza">
-      <div class="carousel-details">
-        <p><strong>Date:</strong> June 9, 2024</p>
-        <p><strong>Author:</strong> Admin</p>
-        <p><strong>Source:</strong> <a href="https://www.presstv.ir/Detail/2024/06/06/726973/Made-in-India-bomb">Quds News Network</a></p>
-        <p><strong>Status:</strong> misleading</p>
-      </div>
-      <h2 class="article-header">Fact Check: Israel Using Indian Bomb Shells in Gaza</h2>
-      <div class="fact-check-content">
-        <h3>Claim</h3>
-        <p>"Made in India" reads the label on the remains of a missile dropped by Israeli warplanes at a UN shelter in Nusseirat refugee camp last night.</p>
-      
-        <h3>Reality</h3>
-        <p>The label "Made in India" found on missile remnants in Gaza has led to speculation about Indian weapons being used in the conflict. However, upon closer examination, the presence of a UL (Underwriters Laboratories) mark above the "Made in India" text indicates that the equipment has been certified by Underwriters Laboratories, not necessarily that it is a weapon manufactured in India for military use. Underwriters Laboratories is an organization that provides safety certifications for products. Therefore, the claim that Israel is using Indian bomb shells in Gaza is misleading; the label signifies certification, not the origin of military hardware.</p>
-      </div>
-      <div class="article-navigation">
-        <a class="btn btn-primary" href="#" onclick="changeArticle(-1)">Previous</a>
-        <a class="btn btn-primary" href="#" onclick="changeArticle(1)">Next</a>
-      </div>
+  <!-- Dropdown filter for categories -->
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <label for="categoryFilter" class="filter-label">Category:</label>
+      <select id="categoryFilter" class="form-control">
+        <option value="politics">Politics</option>
+        <option value="religious">Religious</option>
+        <option value="scientific">Scientific</option>
+        <option value="international">International</option>
+      </select>
     </div>
-  </section>
-  
+    <div class="col-md-6">
+      <label for="categoryFilter" class="filter-label">Page:</label>
+      <select id="pageNumber" class="form-control">
+        <!-- Options will be dynamically populated based on selected category -->
+      </select>
+    </div>
+  </div>
+</div>
 
-  <!-- Include other articles similarly -->
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <label class="filter-label">Article:</label>
+    <span id="article-navigation-info"></span>
+  </div>
+</div>
+
+  <!-- main content section -->
+  <div id="articles-container"></div>
 
   <!-- footer section -->
-  <footer class="container-fluid footer_section">
+  <footer class="footer mt-auto">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7 col-md-9 mx-auto">
-          <p>
-            &copy; 2024 All Rights Reserved By
-            <a href="https://verify-it-app.github.io/">Verify-it</a>
-          </p>
+        <div class="col-12 col-md-6 mb-3 mb-md-0">
+          <div class="footer-logo">Verify-it</div>
+          <p class="text-secondary">Combating Disinformation on social media by promoting verified information and
+            educating users on media literacy.</p>
         </div>
+        <div class="col-12 col-md-6">
+          <ul class="nav justify-content-center justify-content-md-end">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#hero_section">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#about_section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#service_section">Our Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#blog_section">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-4">
+        &copy; 2024 Verify-it. All rights reserved.
       </div>
     </div>
   </footer>
+
   <!-- footer section -->
+  <!-- back to top button -->
+  <button id="scrollToTopBtn" class="button">
+    <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+      </path>
+    </svg>
+  </button>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
- <script>
-  var currentArticle = 1; // Initially show the first article
-
-  // Hide all articles except the first one
-  window.onload = function() {
-    document.querySelectorAll('.article-section').forEach(function(article, index) {
-      if (index !== 0) {
-        article.classList.remove('active');
-      }
-    });
-  };
-
-  function changeArticle(offset) {
-    var totalArticles = document.querySelectorAll('.article-section').length;
-    currentArticle += offset; // Update current article index
-
-    // Ensure the current article index stays within bounds
-    if (currentArticle < 1) {
-      currentArticle = 1;
-    } else if (currentArticle > totalArticles) {
-      currentArticle = totalArticles;
-    }
-
-    // Hide all articles
-    document.querySelectorAll('.article-section').forEach(function(article) {
-      article.classList.remove('active');
-    });
-
-    // Show the current article
-    document.getElementById('article' + currentArticle).classList.add('active');
-
-    // Grey out previous button on first article
-    var prevButton = document.querySelector('.article-navigation a[href="#"][onclick="changeArticle(-1)"]');
-    if (currentArticle === 1) {
-      prevButton.classList.add('disabled');
-    } else {
-      prevButton.classList.remove('disabled');
-    }
-
-    // Grey out next button on last article
-    var nextButton = document.querySelector('.article-navigation a[href="#"][onclick="changeArticle(1)"]');
-    if (currentArticle === totalArticles) {
-      nextButton.classList.add('disabled');
-    } else {
-      nextButton.classList.remove('disabled');
-    }
-  }
-</script>
+  <script src="js/article.js"></script>
+  
 
 </body>
 
 </html>
-
