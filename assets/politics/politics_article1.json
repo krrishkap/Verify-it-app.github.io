@@ -14,6 +14,20 @@
      "claimTweet": "https://twitter.com/QudsNen/status/1798676471835447456?ref_src=twsrc%5Etfw",
      "realityImage": "assets/politics/images/reality/ul-mark.png",
      "realityText": "The label \"Made in India\" found on missile remnants in Gaza has led to speculation about Indian weapons being used in the conflict. However, upon closer examination, the presence of a UL (Underwriters Laboratories) mark above the \"Made in India\" text indicates that the equipment has been certified by Underwriters Laboratories, not necessarily that it is a weapon manufactured in India for military use. Underwriters Laboratories is an organization that provides safety certifications for products. Therefore, the claim that Israel is using Indian bomb shells in Gaza is misleading; the label signifies certification, not the origin of military hardware."
+    
+    "id": 2,
+    "status": "misleading",
+    "image": "assets/politics/images/article/maharastra.jpg",
+    "category": "politics"
+    "date": "June 18, 2024",
+    "author": "Anand Kumar",
+    "source": "https://indianexpress.com/article/cities/mumbai/as-maharashtra-govt-allocates-rs-10-crore-for-waqf-board-vhp-says-appeasement-politics-9393319/",
+    "sourceText": "The Indian Express",
+    "title": "Fact Check: Maharashtra to allocate ₹10 crore to wafq board",
+    "claim": "Maharashtra Govt has allocated ₹10 Crore to State Waqf Board!",
+    "claimTweet": "https://x.com/MumbaichaDon/status/1801470282190016827?t=awYHyq6LGWaUYSiSXMSZ0g&s=19",
+    "realityImage": "assets/politics/images/reality/wafq.jpg",
+    "realityText": "The government of Maharashtra allocated Rs 10 crore to the wafq board for minority welfare. Rs. 2 crore has been released to wafq in Aurangabad and has been assured the rest of the money to be given subsequently.The Vishwa Hindu Parishad last Friday termed the state government's decision to allocate Rs 10 crore to Waqf Board for its digitisation for the financial year 2024-25 as politics of appeasement.The funds allocated by the state government was for digitisation of the Waqf Board. The process was necessitated to fix the wrongs.It would help to identity the land which has been wrongly acquired from Hindus and tribals and backward classes.The question also arises that Wafq board is 3rd biggest land owner after military and railway in this country. They are well equipped with the resources needed for the process. The Maharashtra government could have used other means for digitizing the board why allocate so much money to them?",
   }
 ]
   
