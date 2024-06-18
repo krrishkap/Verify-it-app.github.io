@@ -17,10 +17,10 @@
   },
    {
     "id": 2,
-    "status": "Misleading",
+    "status": "misleading",
     "statusImage": "images/logo.png",
     "image": "assets/politics/images/article/maharashtra.jpg",
-    "category": "Politics",
+    "category": "politics",
     "date": "June 18, 2024",
     "author": "Anand Kumar",
     "source": "https://indianexpress.com/article/cities/mumbai/as-maharashtra-govt-allocates-rs-10-crore-for-waqf-board-vhp-says-appeasement-politics-9393319/",
