@@ -1,8 +1,7 @@
-// Function to create an article card
-function createArticleCard(article) {
+function createArticleCard(article, pageNumber) {
     return `
         <div class="col-md-3 mb-3">
-            <a href="https://verify-it-app.github.io/verified.html?category=${article.category.toLowerCase()}&page=1&article=${article.id}" class="card position-relative">
+            <a href="verified.html?category=${article.category.toLowerCase()}&page=${pageNumber}&article=${article.id}" class="card position-relative">
                 <div class="status-overlay">
                     <img src="${article.statusImage}" alt="Status" class="status-image">
                     <span class="status-text">${article.status}</span>
@@ -18,18 +17,19 @@ function createArticleCard(article) {
     `;
 }
 
-// Function to create a category section
-function createCategorySection(category, articles) {
+
+function createCategorySection(category, articles, pageNumber) {
     const categorySection = document.createElement('div');
     categorySection.classList.add('col', 'mb-4');
     categorySection.innerHTML = `
         <h3>${category.charAt(0).toUpperCase() + category.slice(1)}</h3>
         <div class="row">
-            ${articles.map(article => createArticleCard(article)).join('')}
+            ${articles.map(article => createArticleCard(article, pageNumber)).join('')}
         </div>
     `;
     document.getElementById('articles').appendChild(categorySection);
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const categories = ['politics', 'religious', 'scientific', 'international'];
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(pageNumbers => {
             categories.forEach(category => {
                 const categoryLower = category.toLowerCase();
-                const articleNumber = pageNumbers[category.charAt(0).toUpperCase() + category.slice(1)];
-                fetch(`assets/${categoryLower}/${categoryLower}_article${articleNumber}.json`)
+                const pageNumber = pageNumbers[category.charAt(0).toUpperCase() + category.slice(1)];
+                fetch(`assets/${categoryLower}/${categoryLower}_article${pageNumber}.json`)
                     .then(response => response.json())
                     .then(articles => {
                         // Sort articles in descending order by date
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Limit articles to maximum 4 per category
                         const limitedArticles = articles.slice(0, 4);
 
-                        createCategorySection(category, limitedArticles);
+                        createCategorySection(category, limitedArticles, pageNumber);
                     })
                     .catch(error => console.error('Error fetching articles:', error));
             });
