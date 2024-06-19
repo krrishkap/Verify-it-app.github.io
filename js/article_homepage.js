@@ -2,7 +2,7 @@
 function createArticleCard(article) {
     return `
         <div class="col-md-3 mb-3">
-            <a href="verified.html?category=${article.category.toLowerCase()}&page=1&article=${article.id}" class="card position-relative">
+            <a href="https://verify-it-app.github.io/verified.html?category=${article.category.toLowerCase()}&page=1&article=${article.id}" class="card position-relative">
                 <div class="status-overlay">
                     <img src="${article.statusImage}" alt="Status" class="status-image">
                     <span class="status-text">${article.status}</span>
