@@ -29,88 +29,7 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <!-- Styles -->
-  <style>
-    .social-media a {
-      display: inline-block;
-      margin: 0 10px;
-      /* Adjust the spacing between buttons */
-      padding: 10px 20px;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid #ccc;
-      /* Optional: Add border to buttons */
-      border-radius: 5px;
-      /* Optional: Add rounded corners */
-    }
 
-    .social-button {
-      background: transparent;
-      position: relative;
-      padding: 5px 15px;
-      display: flex;
-      align-items: center;
-      font-size: 17px;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 25px;
-      outline: none;
-      overflow: hidden;
-      transition: color 0.3s, border-color 0.3s;
-      text-align: center;
-    }
-
-    .social-button span {
-      margin: 10px;
-    }
-
-    .social-button::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      content: '';
-      border-radius: 50%;
-      display: block;
-      width: 20em;
-      height: 20em;
-      left: -5em;
-      text-align: center;
-      transition: box-shadow 0.5s ease-out;
-      z-index: -1;
-    }
-
-    .telegram-button {
-      border: 1px solid rgb(40, 144, 241);
-      color: rgb(40, 144, 241);
-    }
-
-    .telegram-button:hover {
-      color: rgb(40, 144, 241);
-      border-color: transparent;
-    }
-
-    .telegram-button:hover::before {
-      box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
-    }
-
-    .whatsapp-button {
-      border: 1px solid #25D366;
-      color: #25D366;
-    }
-
-    .whatsapp-button:hover {
-      color: #25D366;
-      border-color: transparent;
-    }
-
-    .whatsapp-button:hover::before {
-      box-shadow: inset 0 0 0 10em #25D366;
-    }
-  </style>
 </head>
 
 <body>
@@ -125,6 +44,9 @@
             <span>
               Verify-it
             </span>
+            <a href="download.html" class="btn btn-primary" style="background-color: #4b208c; border-color: #4b208c;">
+              Download App
+            </a>
 
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -159,68 +81,79 @@
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section id="hero_area" class="slider_section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 ">
-            <div class="detail_box">
-              <h1>
-                Fighting <br>
-                Disinformation <br>
-                Together
-              </h1>
-              <p>
-                Verify-it is dedicated to combating Disinformation on social media platforms by promoting verified
-                information and educating users on media literacy.
-              </p>
+    
 
-              <a href="download.html" class="btn btn-primary" style="background-color: #4b208c; border-color: #4b208c;">
-                Download App
-              </a>
 
-              <a href="verified.html" class="btn btn-secondary ml-2">
-                Fact Check ✔
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-5 col-md-6 offset-lg-1">
-            <div class="img_content">
-              <div class="img_container">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <div class="img-box">
-                        <img src="images/slider-img.gif" alt="">
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="img-box">
-                        <img src="images/slider-img2.jpg" alt="">
-                      </div>
-                    </div>
-                    <div class="carousel-item">
-                      <div class="img-box">
-                        <img src="images/slider-img.jpg" alt="">
-                      </div>
-                    </div>
+  <!-- Articles section -->
+<section id="articles_section" class="articles_section layout_padding">
+  <div class="container">
+    <div class="heading_container">
+      <h3></h3>
+    </div>
+    <div id="articles">
+      <!-- Categories will be dynamically inserted here -->
+    </div>
+  </div>
+</section>
+
+<!-- slider section -->
+<section id="hero_area" class="slider_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="detail_box">
+          <h1>
+            Fighting <br>
+            Disinformation <br>
+            Together
+          </h1>
+          <p>
+            Verify-it is dedicated to combating Disinformation on social media platforms by promoting verified
+            information and educating users on media literacy.
+          </p>
+
+          
+
+        
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 offset-lg-1">
+        <div class="img_content">
+          <div class="img_container">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="img-box">
+                    <img src="images/slider-img.gif" alt="">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="img-box">
+                    <img src="images/slider-img2.jpg" alt="">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="img-box">
+                    <img src="images/slider-img.jpg" alt="">
                   </div>
                 </div>
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="sr-only">Next</span>
-              </a>
             </div>
-
           </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+
       </div>
-    </section>
-    <!-- end slider section -->
+    </div>
   </div>
+</section>
+<!-- end slider section -->
+
 
   <!-- service section -->
   <section id="service_section" class="service_section layout_padding">
@@ -439,35 +372,8 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () { scrollFunction() };
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      scrollToTopBtn.addEventListener("click", function () {
-        scrollToTop();
-      });
-
-      function scrollToTop() {
-        var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-        if (currentScroll > 0) {
-          window.requestAnimationFrame(scrollToTop);
-          window.scrollTo(0, currentScroll - (currentScroll / 8));
-        }
-      }
-    });
-  </script>
+  <script src="js/article_homepage.js"></script>
+ 
 
 </body>
 

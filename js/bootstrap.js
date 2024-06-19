@@ -4442,4 +4442,32 @@
   });
 
 }));
+
+document.addEventListener("DOMContentLoaded", function () {
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  scrollToTopBtn.addEventListener("click", function () {
+    scrollToTop();
+  });
+
+  function scrollToTop() {
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, currentScroll - (currentScroll / 8));
+    }
+  }
+});
 //# sourceMappingURL=bootstrap.js.map
