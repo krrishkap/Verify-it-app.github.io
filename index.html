@@ -29,88 +29,7 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <!-- Styles -->
-  <style>
-    .social-media a {
-      display: inline-block;
-      margin: 0 10px;
-      /* Adjust the spacing between buttons */
-      padding: 10px 20px;
-      text-decoration: none;
-      color: inherit;
-      border: 1px solid #ccc;
-      /* Optional: Add border to buttons */
-      border-radius: 5px;
-      /* Optional: Add rounded corners */
-    }
 
-    .social-button {
-      background: transparent;
-      position: relative;
-      padding: 5px 15px;
-      display: flex;
-      align-items: center;
-      font-size: 17px;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      border-radius: 25px;
-      outline: none;
-      overflow: hidden;
-      transition: color 0.3s, border-color 0.3s;
-      text-align: center;
-    }
-
-    .social-button span {
-      margin: 10px;
-    }
-
-    .social-button::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      content: '';
-      border-radius: 50%;
-      display: block;
-      width: 20em;
-      height: 20em;
-      left: -5em;
-      text-align: center;
-      transition: box-shadow 0.5s ease-out;
-      z-index: -1;
-    }
-
-    .telegram-button {
-      border: 1px solid rgb(40, 144, 241);
-      color: rgb(40, 144, 241);
-    }
-
-    .telegram-button:hover {
-      color: rgb(40, 144, 241);
-      border-color: transparent;
-    }
-
-    .telegram-button:hover::before {
-      box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
-    }
-
-    .whatsapp-button {
-      border: 1px solid #25D366;
-      color: #25D366;
-    }
-
-    .whatsapp-button:hover {
-      color: #25D366;
-      border-color: transparent;
-    }
-
-    .whatsapp-button:hover::before {
-      box-shadow: inset 0 0 0 10em #25D366;
-    }
-  </style>
 </head>
 
 <body>
@@ -179,9 +98,7 @@
                 Download App
               </a>
 
-              <a href="verified.html" class="btn btn-secondary ml-2">
-                Fact Check ✔
-              </a>
+            
             </div>
           </div>
           <div class="col-lg-5 col-md-6 offset-lg-1">
@@ -220,7 +137,20 @@
       </div>
     </section>
     <!-- end slider section -->
+
+
+  <!-- Articles section -->
+<section id="articles_section" class="articles_section layout_padding">
+  <div class="container">
+    <div class="heading_container">
+      <h2>Fact Checked ✔</h2>
+    </div>
+    <div id="articles">
+      <!-- Categories will be dynamically inserted here -->
+    </div>
   </div>
+</section>
+
 
   <!-- service section -->
   <section id="service_section" class="service_section layout_padding">
@@ -439,35 +369,8 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () { scrollFunction() };
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      scrollToTopBtn.addEventListener("click", function () {
-        scrollToTop();
-      });
-
-      function scrollToTop() {
-        var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-        if (currentScroll > 0) {
-          window.requestAnimationFrame(scrollToTop);
-          window.scrollTo(0, currentScroll - (currentScroll / 8));
-        }
-      }
-    });
-  </script>
+  <script src="js/article_homepage.js"></script>
+ 
 
 </body>
 
