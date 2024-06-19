@@ -3,6 +3,182 @@ body {
   color: #0c0c0c;
   background-color: #ffffff;
 }
+/* stling for articles in homepage*/
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  /* Adjust the spacing between buttons */
+  padding: 10px 20px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ccc;
+  /* Optional: Add border to buttons */
+  border-radius: 5px;
+  /* Optional: Add rounded corners */
+}
+
+.social-button {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  transition: color 0.3s, border-color 0.3s;
+  text-align: center;
+}
+
+.social-button span {
+  margin: 10px;
+}
+
+.social-button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.telegram-button {
+  border: 1px solid rgb(40, 144, 241);
+  color: rgb(40, 144, 241);
+}
+
+.telegram-button:hover {
+  color: rgb(40, 144, 241);
+  border-color: transparent;
+}
+
+.telegram-button:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
+}
+
+.whatsapp-button {
+  border: 1px solid #25D366;
+  color: #25D366;
+}
+
+.whatsapp-button:hover {
+  color: #25D366;
+  border-color: transparent;
+}
+
+.whatsapp-button:hover::before {
+  box-shadow: inset 0 0 0 10em #25D366;
+}
+
+.article-image {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+.card:hover .card-title{
+color: rgb(96, 10, 235); /* Change text color to green on hover */
+}
+
+.category-label {
+position: absolute;
+bottom: 10px;
+right: 10px;
+background-color: rgba(111, 0, 255, 0.808); /* Blue background with 70% opacity */
+padding: 5px 10px;
+border-radius: 5px;
+color: white;
+font-size: 12px;
+display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) { /* Adjust as per your mobile breakpoint */
+.category-label {
+display: block; /* Show on mobile screens */
+}
+}
+
+/* Ensure the label appears on top of other elements */
+.card {
+position: relative;
+overflow: hidden; /* Ensure the overflow is hidden to clip the label */
+}
+
+/* Rest of your existing styles */
+
+
+
+/* Custom styles for articles section */
+.articles_section .row {
+display: flex;
+flex-wrap: wrap;
+margin-left: -15px; /* Adjust for bootstrap grid gutters */
+margin-right: -15px; /* Adjust for bootstrap grid gutters */
+}
+
+.articles_section .col-md-3 {
+padding-left: 15px; /* Adjust for bootstrap grid gutters */
+padding-right: 15px; /* Adjust for bootstrap grid gutters */
+flex: 0 0 25%; /* Set to 25% width for 4 columns per row */
+max-width: 25%; /* Set max-width to limit size */
+}
+
+.articles_section .card {
+width: 100%;
+text-decoration: none;
+color: inherit;
+}
+
+.articles_section .card:hover {
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+.articles_section .col-md-3 {
+flex: 0 0 100%; /* Full width for mobile */
+max-width: 100%;
+}
+}
+
+.status-overlay {
+position: absolute;
+top: 10px;
+left: 10px;
+background-color: rgba(255, 0, 0, 0.8);
+padding: 5px 10px;
+border-radius: 5px;
+color: white;
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 5px;
+}
+
+.status-image {
+height: 30px; /* Adjust as per your image size */
+}
+
+.status-text {
+font-size: 12px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 90px; /* Adjust as needed */
+}
 
 .layout_padding {
   padding-top: 90px;
