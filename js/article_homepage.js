@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('assets/article_page_numbers.json')
         .then(response => response.json())
         .then(pageNumbers => {
-            categories.forEach(category => {
+            const fetchPromises = categories.map(category => {
                 const categoryLower = category.toLowerCase();
                 const pageNumber = pageNumbers[category.charAt(0).toUpperCase() + category.slice(1)];
-                fetch(`assets/${categoryLower}/${categoryLower}_article${pageNumber}.json`)
+                return fetch(`assets/${categoryLower}/${categoryLower}_article${pageNumber}.json`)
                     .then(response => response.json())
                     .then(articles => {
                         // Sort articles in descending order by date
@@ -53,6 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     })
                     .catch(error => console.error('Error fetching articles:', error));
             });
+
+            Promise.all(fetchPromises)
+                .then(() => {
+                    // All content has loaded, delay hiding the loading screen by 2 seconds
+                    setTimeout(() => {
+                        document.getElementById('loading-screen').style.display = 'none';
+                    }, 1500); // 2000 milliseconds = 2 seconds
+                })
+                .catch(error => console.error('Error fetching articles:', error));
         })
         .catch(error => console.error('Error fetching article page numbers:', error));
 });
+
+
