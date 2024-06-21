@@ -160,7 +160,7 @@ window.onload = function () {
         // Hide the loading screen 2 seconds after loading articles
         setTimeout(() => {
             document.getElementById('loading-screen').style.display = 'none';
-        }, 1500);
+        }, 1000);
     });
 };
 

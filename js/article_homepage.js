@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // All content has loaded, delay hiding the loading screen by 2 seconds
                     setTimeout(() => {
                         document.getElementById('loading-screen').style.display = 'none';
-                    }, 1500); // 2000 milliseconds = 2 seconds
+                    }, 1000); // 2000 milliseconds = 2 seconds
                 })
                 .catch(error => console.error('Error fetching articles:', error));
         })
