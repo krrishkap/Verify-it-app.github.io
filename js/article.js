@@ -3,45 +3,47 @@
 
     
     function generateArticleHTML(article) {
-  return `
-    <section class="container article-section ${article.id === 1 ? 'active' : ''}" id="article${article.id}">
-      <div class="article-content">
-        <div class="overlay-status">
-          <img src="${article.statusImage}" alt="Status">
-          ${article.status}
-        </div>
-        <img src="${article.image}" class="d-block w-100" alt="${article.title}">
-        <div class="carousel-details">
-          <p><strong>Category:</strong> ${article.category}</p>
-          <p><strong>Date:</strong> ${article.date}</p>
-          <p><strong>Author:</strong> ${article.author}</p>
-          <p><strong>Source:</strong> <a href="${article.source}">${article.sourceText}</a></p>
-          <p><strong>Status:</strong> ${article.status}</p>
-        </div>
-        <h2 class="article-header">${article.title}</h2>
-        <div class="fact-check-content">
-          <h3>Claim</h3>
-          <p>${article.claim}</p>
-          <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">${article.claim}</p>&mdash; Source (<a href="${article.claimTweet}">Tweet</a>)
-          </blockquote>
-          <div id="twitter-widget-container"></div>
-          <h3>Reality</h3>
-          <img src="${article.realityImage}" class="d-block w-100" alt="Reality Image">
-          <p>${article.realityText}</p>
-        </div>
-        <div class="article-navigation">
-    <div class="navigation-container">
-        <a class="btn btn-primary" href="#" onclick="changeArticle(-1)">Previous</a>
-        <div class="navigation-info"></div>
-        <a class="btn btn-primary" href="#" onclick="changeArticle(1)">Next</a>
-    </div>
-</div>
-
-      </div>
-    </section>
-  `;
-}
+      return `
+        <section class="container article-section ${article.id === 1 ? 'active' : ''}" id="article${article.id}">
+          <div class="article-content">
+            <div class="overlay-status">
+              <img src="${article.statusImage}" alt="Status">
+              ${article.status}
+            </div>
+            <img src="${article.image}" class="d-block w-100" alt="${article.title}">
+            <div class="carousel-details">
+              <p><strong>Category:</strong> ${article.category}</p>
+              <p><strong>Date:</strong> ${article.date}</p>
+              <p><strong>Author:</strong> ${article.author}</p>
+              <p><strong>Source:</strong> <a href="${article.source}">${article.sourceText}</a></p>
+              <p><strong>Status:</strong> ${article.status}</p>
+            </div>
+            <h2 class="article-header">${article.title}</h2>
+            <div class="fact-check-content">
+              <h3>Claim</h3>
+              <p>${article.claim}</p>
+              ${article.claimTweet ? `
+                <blockquote class="twitter-tweet">
+                  <p lang="en" dir="ltr">${article.claim}</p>&mdash; Source (<a href="${article.claimTweet}">Tweet</a>)
+                </blockquote>
+                <div id="twitter-widget-container"></div>
+              ` : ''}
+              <h3>Reality</h3>
+              <img src="${article.realityImage}" class="d-block w-100" alt="Reality Image">
+              <p>${article.realityText}</p>
+            </div>
+            <div class="article-navigation">
+              <div class="navigation-container">
+                <a class="btn btn-primary" href="#" onclick="changeArticle(-1)">Previous</a>
+                <div class="navigation-info"></div>
+                <a class="btn btn-primary" href="#" onclick="changeArticle(1)">Next</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+    
 
 
 function populatePageNumbers(category) {
